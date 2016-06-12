@@ -5,8 +5,6 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusTrackLight", "BusTrackLight\BusTrackLight.csproj", "{E9EB86FA-D9F6-4B37-B775-BC21A4120C2A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusTrackLight.Tests", "BusTrackLight.Tests\BusTrackLight.Tests.csproj", "{D4395048-6662-41F8-A956-9E07C1B3419A}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{E9EB86FA-D9F6-4B37-B775-BC21A4120C2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9EB86FA-D9F6-4B37-B775-BC21A4120C2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9EB86FA-D9F6-4B37-B775-BC21A4120C2A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D4395048-6662-41F8-A956-9E07C1B3419A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D4395048-6662-41F8-A956-9E07C1B3419A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D4395048-6662-41F8-A956-9E07C1B3419A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D4395048-6662-41F8-A956-9E07C1B3419A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
