@@ -266,7 +266,9 @@
 
     // llama a metodo externo al que le pasa la posicion
     function hidValues(position) {
-        _this.setValues(position);
+        if (_this.setValues) {
+            _this.setValues(position);
+        }
     }
 
     function displayUbigeo(geojson) {
