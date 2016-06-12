@@ -27,7 +27,7 @@ namespace BusTrackLight.Models
             Configure();
         }
 
-        public DbSet<Test> Tests { get; set; }
+        public DbSet<BusSensor> BusSensor { get; set; }
         
         public static ApplicationDbContext Create()
         {

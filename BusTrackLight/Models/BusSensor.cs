@@ -7,11 +7,20 @@ using System.Threading.Tasks;
 
 namespace BusTrackLight.Models
 {
-    public class Test
+    public class BusSensor
     {
         [Key]
         public int Id { get; set; }
 
-        public string Value { get; set; }
+        public string DeviceId { get; set; }
+
+        public int Value { get; set; }
+
+        public double? Lat { get; set; }
+
+        public double? Lon { get; set; }
+
+
+        public DateTime Fecha { get; set; }
     }
 }

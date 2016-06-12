@@ -15,17 +15,12 @@ namespace BusTrackLight.Controllers
     public class ValuesController : ApiController
     {
         // GET api/values
-        public IEnumerable<string> Get()
+        public List<BusSensor> Get()
         {
-            var values = new List<string>();
             IOwinContext octx = HttpContext.Current.GetOwinContext();
             var ctx = octx.Get<ApplicationDbContext>();
-            var testlist = ctx.Tests.ToList();
-            foreach (var value in testlist)
-            {
-                values.Add(value.Value);
-            }
-            return values.ToArray();
+            var testlist = ctx.BusSensor.ToList();
+            return testlist;
         }
 
         // GET api/values/5
@@ -35,13 +30,20 @@ namespace BusTrackLight.Controllers
         }
 
         // POST api/values
-        public void Post([FromBody]string value)
+        public void Post([FromBody]Prueba prueba)
         {
             IOwinContext octx = HttpContext.Current.GetOwinContext();
             var ctx = octx.Get<ApplicationDbContext>();
-            var test = ctx.Tests.Create();
-            test.Value = value;
-            ctx.Tests.Add(test);
+            var test = ctx.BusSensor.Create();
+            test.DeviceId = prueba.DeviceId;
+            //test.Value = prueba.Valor;
+            var temp = prueba.Valor.Split(',');
+            test.Value = int.Parse(temp[0]);
+            test.Lat = float.Parse(temp[1]);
+            test.Lon = float.Parse(temp[2]);
+
+            test.Fecha = prueba.Fecha;
+            ctx.BusSensor.Add(test);
             ctx.SaveChanges();
         }
 
@@ -54,5 +56,13 @@ namespace BusTrackLight.Controllers
         public void Delete(int id)
         {
         }
+    }
+
+    public class Prueba
+    {
+        public string DeviceId { get; set; }
+        public string Valor { get; set; }
+        public DateTime Fecha { get; set; }
+
     }
 }

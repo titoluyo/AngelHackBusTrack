@@ -15,3 +15,8 @@ select,
 textarea {
     max-width: 280px;
 }
+html, body, #map-raiz {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+}
